@@ -1,0 +1,46 @@
+{
+    "name": "monii/pagination",
+    "description": "Pagination",
+    "license": "MIT",
+    "keywords": ["pagination"],
+    "authors": [
+        {
+            "name": "monii.io",
+            "email": "team@monii.com"
+        },
+        {
+            "name": "Beau Simensen",
+            "email": "beau@dflydev.com"
+        },
+        {
+            "name": "Steve Marks",
+            "email": "steve.marks@monii.com"
+        },
+        {
+            "name": "Alec Charlton",
+            "email": "alec.charlton@monii.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Monii\\Pagination\\": "src"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.8",
+        "squizlabs/php_codesniffer": "^2.3"
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Monii\\Pagination\\Tests\\Unit\\": "tests/unit"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.0.x-dev"
+        }
+    }
+}
