@@ -55,14 +55,13 @@ class PaginatedCollection
         $itemsPerPage = null
     ) {
         $this->items = $items;
-        $this->totalNumberOfItems = $totalNumberOfItems;
-        $this->numberOfPages = $numberOfPages;
-        $this->currentPage = $currentPage;
-        $this->nextPage = $currentPage < $numberOfPages ? $currentPage + 1 : null;
+        $this->totalNumberOfItems = (int) $totalNumberOfItems;
+        $this->numberOfPages = (int) $numberOfPages;
+        $this->currentPage = (int) $currentPage;
+        $this->nextPage = (int) $currentPage < $numberOfPages ? $currentPage + 1 : null;
         $this->previousPage = $currentPage > 1 ? $currentPage - 1 : null;
         $this->itemsPerPage = $itemsPerPage;
     }
-
 
     /**
      * @return object[]
