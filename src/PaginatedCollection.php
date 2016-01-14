@@ -43,22 +43,23 @@ class PaginatedCollection
      * PaginatedCollection constructor.
      * @param object[] $items
      * @param int $totalNumberOfItems
-     * @param int $numberOfPages
      * @param int $currentPage
      * @param int $itemsPerPage
      */
     public function __construct(
         array $items,
         $totalNumberOfItems,
-        $numberOfPages,
         $currentPage,
         $itemsPerPage = null
     ) {
         $this->items = $items;
         $this->totalNumberOfItems = (int) $totalNumberOfItems;
-        $this->numberOfPages = (int) $numberOfPages;
+        $this->numberOfPages = ceil($totalNumberOfItems / $itemsPerPage);
+        if ($currentPage > $this->numberOfPages) {
+            $currentPage = $this->numberOfPages;
+        }
         $this->currentPage = (int) $currentPage;
-        $this->nextPage = (int) $currentPage < $numberOfPages ? $currentPage + 1 : null;
+        $this->nextPage = (int) $currentPage < $this->numberOfPages ? $currentPage + 1 : null;
         $this->previousPage = $currentPage > 1 ? $currentPage - 1 : null;
         $this->itemsPerPage = $itemsPerPage;
     }

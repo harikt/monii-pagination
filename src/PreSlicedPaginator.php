@@ -14,16 +14,9 @@ class PreSlicedPaginator
             $page = 1;
         }
 
-        $pages = ceil($totalItemCount / $itemsPerPage);
-
-        if ($page > $pages) {
-            $page = $pages;
-        }
-
         return new PaginatedCollection(
             $items,
             $totalItemCount,
-            $pages,
             $page,
             $itemsPerPage
         );

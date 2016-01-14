@@ -31,7 +31,6 @@ class InMemoryPaginatorTest extends PHPUnit_Framework_TestCase
                 new PaginatedCollection(
                     ['a', 'b', 'c'],
                     3,  // total number of items
-                    1,  // number of pages
                     1,  // current page
                     10  // items per page
                 ),
@@ -41,7 +40,6 @@ class InMemoryPaginatorTest extends PHPUnit_Framework_TestCase
                 new PaginatedCollection(
                     ['a', 'b', 'c'],
                     3,  // total number of items
-                    1,  // number of pages
                     1,  // current page
                     10  // items per page
                 ),
@@ -51,7 +49,6 @@ class InMemoryPaginatorTest extends PHPUnit_Framework_TestCase
                 new PaginatedCollection(
                     ['a', 'b', 'c'],
                     14, // total number of items
-                    5,  // number of pages
                     1,  // current page
                     3   // items per page
                 ),
@@ -61,7 +58,6 @@ class InMemoryPaginatorTest extends PHPUnit_Framework_TestCase
                 new PaginatedCollection(
                     ['a', 'b', 'c'],
                     14, // total number of items
-                    5,  // number of pages
                     1,  // current page
                     3   // items per page
                 ),
@@ -71,7 +67,6 @@ class InMemoryPaginatorTest extends PHPUnit_Framework_TestCase
                 new PaginatedCollection(
                     ['d', 'e', 'f'],
                     14, // total number of items
-                    5,  // number of pages
                     2,  // current page
                     3  // items per page
                 ),

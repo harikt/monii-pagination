@@ -30,6 +30,21 @@ Until a stable version has been released or if a development version is preferre
 $> composer require monii/pagination:@dev
 ```
 
+Usage
+-----
+
+```php
+use Monii\Pagination\PaginatedCollection;
+
+$paginated = new PaginatedCollection(
+    ['a', 'b', 'c'],
+    14, // total number of items
+    1,  // current page
+    3   // items per page
+);
+```
+
+See `PaginatedCollection` for the available methods.
 
 License
 -------
